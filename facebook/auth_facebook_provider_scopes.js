@@ -1,0 +1,1 @@
+provider.addScope('user_birthday');

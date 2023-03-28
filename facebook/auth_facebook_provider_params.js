@@ -1,0 +1,3 @@
+provider.setCustomParameters({
+    'display': 'popup'
+  });
