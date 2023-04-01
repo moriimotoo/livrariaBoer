@@ -2,7 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
 import {
   getAuth,
-  GoogleAuthProvider,
+  GoogleAuthProvider, FacebookAuthProvider,
   signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js";
 
@@ -18,6 +18,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider(app);
+const provider2 = new FacebookAuthProvider(app);
 
 document.querySelector("#googlelogin").addEventListener("click", () => {
   signInWithPopup(auth, provider)
@@ -59,3 +60,21 @@ document.querySelector("#login").addEventListener("click", () => {
       console.log(error.message);
     });
 });
+
+document.querySelector('#facelogin').addEventListener('click',() =>{
+  provider2.addScope('user_birthday');
+  provider2.addScope('user_gender');
+  provider2.addScope('email');
+
+  signInWithPopup(auth, provider2).then((result) => {
+    const user = result.user;
+      console.log(user);
+      alert(`Seja bem-vindo ${user.displayName}`);
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 5000);
+  })
+  .catch(error =>{
+      console.log({error});
+  });
+})

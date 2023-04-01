@@ -3,13 +3,23 @@
     "firebase": "^9.18.0",
     "firebase-admin": "^11.5.0"
   },
-  "web":{
-    "client_id":"435257846988-fjget2j0c1md9l7k47nnhk2k3qlvnkoa.apps.googleusercontent.com",
-    "project_id":"appyuh",
-    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
-    "token_uri":"https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
-    "redirect_uris":["https://appyuh.firebaseapp.com/__/auth/handler"],
-    "javascript_origins":["http://localhost","http://localhost:5000","https://appyuh.firebaseapp.com","http://127.0.0.1:5555"]
+  "web": {
+    "client_id": "435257846988-fjget2j0c1md9l7k47nnhk2k3qlvnkoa.apps.googleusercontent.com",
+    "project_id": "appyuh",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "redirect_uris": [
+      "https://appyuh.firebaseapp.com/__/auth/handler"
+    ],
+    "javascript_origins": [
+      "http://localhost",
+      "http://localhost:5000",
+      "https://appyuh.firebaseapp.com",
+      "http://127.0.0.1:5555"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
